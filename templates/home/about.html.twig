@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset("css/about.css") }}">
+{% endblock %}
+
+{% block body %}
+
+  <div class="container">
+  <div class="carousel slide carousel-fade mt-4" data-ride="carousel" data-interval="3000">
+			<div class="bg-wrapper"></div>
+			<div class="info-wrapper">
+				<h3 class="blue-color">Prosty. Mądry. Bezpieczny.</h3>
+				<p class="text-white mb-5">Redi Shade to stylowe, szybko mocowane, rolety materiałowe i  papierowe bezinwazyjne plisowane, łatwe w montażu, odpowiednie dla prawie każdego okna.</p>
+				<a href="/catalog" class="shop-btn">Kupjc teraz</a>
+			</div>
+		  <div class="carousel-inner">
+			  <div class="carousel-item active">
+			    <img src="img/carousel/banner4.jpg" alt="Banner 4">
+			  </div>
+			  <div class="carousel-item">
+			    <img src="img/carousel/banner6.jpg" alt="Banner 6">
+			  </div>
+			  <div class="carousel-item">
+			    <img src="img/carousel/banner7.jpg" alt="Banner 7">
+	  		</div>
+		  </div>
+		</div>
+	<section class="why-us mt-5 mb-5">
+			<div class="row no-gutters">
+				<div class="col-12 col-lg-9 d-flex flex-column justify-content-center">
+					<h2>Natychmiastowe i  <span class="blue-color">niedrogie.</span></h2>
+					<p class="mt-4 mb-4 gray-color font-weight-light">Instalacja Redi Shade jest łatwa.<br>Wszystko, co musisz zrobić, to zmierzyć okno, przyciąć rolety na wymiar nożem, zdjąć osłonę z taśmy izolacyjnej 3M i przykleić rolety do okna, gotowe! Dobrze jest wyczyścić obszar, do którego zostaną przymocowane żaluzje, ponieważ kurz i tłuszcz mogą mieć wpływ na klej.<br>Każde okno w Twojej nieruchomości może być zamknięte za jedyne własne żaluzje. Co więcej, odcienie Redi mogą być trwałe, jeśli lubisz wygląd.</p>
+					<a href="/catalog" class="shop-btn width-fit-content">Kupjc teraz</a>
+				</div>
+				<div class="col-12 col-lg-3 d-none d-lg-block">
+					<img src="img/acc-logo.jpg" alt="Acc Logo">
+				</div>
+			</div>
+		</section>
+	<section class="about-colours">
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<div class="about-block dark">
+					<p class="title">Nasze <span class="blue-color">kolory</span></p>
+					<p class="description">Nasze innowacyjne żaluzje, od filtrowania światła białego i naturalnego po ściemnianie szarości i ściemnianie czerni, zapewniają natychmiastowe rozwiązanie dla gołych okien, minimalizują koszty i wyglądają fantastycznie</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-6">
+				<div class="about-block light">
+					<p class="title">Dlaczego Redi Shade?</p>
+					<ul>
+						<li>Bezpieczny dla dzieci</li>
+						<li>Do recyklingu</li>
+						<li>Ekologiczne</li>
+						<li>Przytnij, aby dopasować</li>
+						<li>Na oknie nie pozostały lepkie ślady</li>
+						<li>Elegancki i prosty design</li>
+						<li>Neutralne odcienie pasujące do dowolnej kolorystyki</li>
+						<li>Instalacja w mniej niż minutę</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="video">
+		<iframe src="https://www.youtube.com/embed/Qjes1Qxaw20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+</div>
+{% endblock %}

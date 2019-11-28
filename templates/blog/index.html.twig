@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("css/catalog.css") }}">{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h1>Posts:</h1>
+        <div class="product-list">
+            {% for post in posts %}
+                <div class="product">
+                    <h3>{{ post.name }}</h3><small>By: {{ post.author.email }}</small>
+                    <a href="{{ path("post", {post: post.id}) }}" >See more >></a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

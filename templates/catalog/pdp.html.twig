@@ -1,0 +1,182 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset("css/catalog.css") }}">{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row no-gutters mt-3 pdp">
+			<div class="col-12 col-lg-3">
+				<p class="gray-color mb-0"><small>Payment methods:</small></p>
+				<div class="row no-gutters">
+					<svg viewBox="0 0 120 78" width="50" height="50" xmlns="http://www.w3.org/2000/svg" id="1079303026" class="svg u_1079303026" data-icon-custom="true" data-icon-name="paypal.svg"> <g fill="none" fill-rule="evenodd" id="1820871289"> <path d="M79.038 34.08c-.43 2.714-2.585 2.714-4.67 2.714H73.18l.833-5.067a.648.648 0 0 1 .647-.532h.544c1.419 0 2.76 0 3.451.778.414.465.539 1.154.382 2.107zM78.131 27h-7.864c-.538 0-.995.376-1.08.887l-3.179 19.385c-.063.382.245.728.648.728h4.034a.756.756 0 0 0 .756-.62l.901-5.496c.084-.51.542-.887 1.08-.887h2.488c5.18 0 8.169-2.41 8.95-7.186.352-2.09.014-3.73-1.003-4.88C82.744 27.668 80.762 27 78.13 27z" fill="#2494D7" id="1129966959"></path><path d="M24.038 34.08c-.43 2.714-2.585 2.714-4.67 2.714H18.18l.832-5.067a.649.649 0 0 1 .648-.532h.544c1.419 0 2.76 0 3.45.778.415.465.54 1.154.383 2.107zM23.131 27h-7.864c-.537 0-.995.376-1.079.887l-3.18 19.385c-.062.382.245.728.648.728h3.754c.538 0 .996-.376 1.08-.886l.858-5.23c.083-.51.541-.887 1.079-.887h2.488c5.18 0 8.169-2.41 8.95-7.186.352-2.09.014-3.73-1.003-4.88C27.743 27.668 25.762 27 23.13 27zM40.565 41.043c-.335 1.972-1.908 3.296-3.914 3.296-1.005 0-1.81-.322-2.328-.932-.513-.604-.706-1.465-.543-2.424.312-1.955 1.91-3.321 3.885-3.321.985 0 1.784.325 2.312.94.531.62.74 1.487.588 2.44zm4.831-6.718H41.93a.602.602 0 0 0-.596.507l-.152.965-.243-.35C40.188 34.363 38.514 34 36.843 34c-3.83 0-7.102 2.89-7.74 6.943-.33 2.021.14 3.954 1.291 5.302C31.452 47.485 32.962 48 34.761 48c3.088 0 4.8-1.975 4.8-1.975l-.155.96a.602.602 0 0 0 .596.695h3.123c.495 0 .916-.359.993-.846l1.874-11.815a.601.601 0 0 0-.596-.694z" fill="#003E92" id="1558878281"></path><path d="M95.565 41.043c-.335 1.972-1.908 3.296-3.914 3.296-1.005 0-1.81-.322-2.328-.932-.513-.604-.706-1.465-.543-2.424.312-1.955 1.91-3.321 3.885-3.321.985 0 1.784.325 2.312.94.53.62.74 1.487.588 2.44zm4.831-6.718H96.93a.602.602 0 0 0-.596.507l-.152.965-.243-.35C95.188 34.363 93.514 34 91.843 34c-3.83 0-7.102 2.89-7.74 6.943-.33 2.021.14 3.954 1.291 5.302C86.453 47.485 87.962 48 89.761 48c3.088 0 4.8-1.975 4.8-1.975l-.155.96a.602.602 0 0 0 .597.695h3.122c.495 0 .916-.359.993-.846l1.874-11.815a.601.601 0 0 0-.596-.694z" fill="#2494D7" id="1042692562"></path><path d="M64.387 34h-3.535c-.338 0-.655.164-.844.438l-4.876 7.039-2.067-6.764a1.018 1.018 0 0 0-.977-.713h-3.475a.602.602 0 0 0-.58.794l3.893 11.196-3.661 5.063c-.288.397.002.947.499.947h3.532c.334 0 .648-.16.838-.43L64.89 34.941c.281-.398-.01-.942-.503-.942" fill="#003E92" id="1319851866"></path><path d="M105.168 27.532l-3.16 19.74a.634.634 0 0 0 .634.728h3.178c.526 0 .974-.376 1.056-.886l3.116-19.386a.634.634 0 0 0-.634-.728h-3.556a.638.638 0 0 0-.634.532" fill="#2494D7" id="1255288574"></path></g></svg>
+					<svg viewBox="0 0 120 78" width="50" height="50" xmlns="http://www.w3.org/2000/svg" id="1735171211" class="svg u_1735171211" data-icon-custom="true" data-icon-name="visa.svg"> <g fill="none" fill-rule="evenodd" id="1185592449"> <path d="M49.847 24.519L45.051 53.5h7.673l4.797-28.982h-7.674zm-11.252 0l-7.317 19.934-.865-4.293v.002l-.19-.963c-.886-1.876-2.936-5.442-6.809-8.485A30.72 30.72 0 0 0 20 28.39l6.65 25.11h7.994l12.21-28.982h-8.26zm29.948 8.046c0-3.277 7.473-2.856 10.757-1.077l1.095-6.224S77.015 24 73.493 24c-3.808 0-12.851 1.638-12.851 9.594 0 7.489 10.613 7.582 10.613 11.513 0 3.932-9.52 3.23-12.66.75l-1.142 6.505S60.879 54 66.115 54c5.236 0 13.137-2.667 13.137-9.922 0-7.535-10.71-8.237-10.71-11.513zm31.313-8.046h-6.17c-2.848 0-3.542 2.16-3.542 2.16L78.7 53.5H86.7l1.6-4.305h9.755l.9 4.305H106L99.856 24.52zm-9.346 18.73l4.032-10.846 2.269 10.846H90.51z" fill="#0067B0" id="1770900818"></path><path d="M27.923 27.519S27.614 25 24.315 25H12c3.85 1.038 7.617 2.985 11.303 5.84 5.283 4.092 6.713 8.232 7.094 9.088l-2.474-12.41z" fill="#F6AC1D" id="1411928975"></path></g></svg>
+					<svg viewBox="0 0 120 78" width="50" height="50" xmlns="http://www.w3.org/2000/svg" id="1849475171" class="svg u_1849475171" data-icon-custom="true" data-icon-name="mastercard.svg"> <g fill-rule="nonzero" fill="none" id="1894367163"> <path d="M96 39c0 12.15-9.85 22-22 22s-22-9.85-22-22 9.85-22 22-22 22 9.85 22 22z" fill="#F79F1A" id="1409029930"></path><path d="M47 61c-12.15 0-22-9.85-22-22s9.85-22 22-22 22 9.85 22 22-9.85 22-22 22z" fill="#EA001B" id="1706715155"></path><path d="M60.5 56.5C55.315 52.375 52 46.068 52 39s3.315-13.375 8.5-17.5C65.685 25.625 69 31.932 69 39s-3.315 13.375-8.5 17.5z" fill="#FF5F01" id="1229847801"></path></g></svg>
+					<svg viewBox="0 0 120 78" width="50" height="50" xmlns="http://www.w3.org/2000/svg" id="1708990683" class="svg u_1708990683" data-icon-custom="true" data-icon-name="amex.svg"> <g fill="none" fill-rule="evenodd" id="1228011543"> <path fill="#26A6D1" d="M0 0h120v78H0z" id="1308341193"></path><path d="M18.963 26h12.22l1.59 3.112V26h14.292l3.134 6.833L53.262 26h35.665l3.615 4.035L96.422 26H113l-12 13.31 12 13.198-16.839-.034-3.732-4.112-3.987 4.112H55.658v-3.29l-1.405 3.29H46.1l-1.405-3.222v3.222H28.93l-1.775-4.221h-4.058l-1.776 4.22H7L18.963 26zm2.771 3.76l-8.39 18.992h5.104l1.802-4.255h9.756l1.806 4.259h9.524V33.87l6.788 14.886h4.142l6.75-14.886.038 14.886h4.63V29.759h-7.61l-5.648 12.872-6.129-12.872H36.65v17.952L28.715 29.76h-6.98zm46.186 0v18.985h18.535l5.974-6.292 5.758 6.292h6.019l-8.749-9.438 8.749-9.548h-5.758l-5.944 6.22-5.758-6.22H67.92zm-42.79 3.213l3.21 7.587h-6.424l3.214-7.587zm47.439.72v-.004h11.747l5.126 5.546-5.353 5.576h-11.52v-3.785h10.27V37.16H72.57v-3.467z" fill="#FFF" fill-rule="nonzero" id="1956709252"></path></g></svg>
+				</div>
+			</div>
+			<div class="col-lg-6"></div>
+			<div class="col-12 col-lg-3 d-flex justify-content-center align-items-center w-100">
+				<input type="text" name="search" class="search"><i class="fas fa-search search-btn"></i>
+			</div>
+		</div>
+    <div class="row pdp no-gutters">
+      <div class="col-12 col-lg-3">
+        <a onclick="history.back()">Back</a>
+        <h1 class="blue-color">{{ product.name }}</h1>
+        <p class="price">£ {{ product.price }}</p>
+        <p class="size-desc">Three sizes available...</p>
+        <select class="form-control mb-3">
+          {% for size in product.sizes %}
+            <option value="{{ size.id }}">{{ size.width }}cm x {{ size.height }}cm ({{ size.description }}
+              ) (£+{{ size.addPrice }})</option>
+          {% endfor %}
+        </select>
+        <div class="d-flex flex-column w-100">
+          <div class="row no-gutters btns"><input type="number" class="amount form-control" style="width: 80%;" min="1" value="1" max="{{ product.inStock }}" placeholder="Amount"><input type="button" class="btn btn-outline-secondary" style="width: 20%; text-align: center;" value="+" onclick="document.querySelector('.amount').stepUp(1)"></div>
+          <p class="gray-color quantity"><span>1</span> items in the bag</p>
+          <a class="shop-btn mb-3 plus gray">Add to Cart</a>
+          <a class="shop-btn mb-3 checkout" style="display: none;" href="/cart">Go to checkout</a>
+          <p class="description mb-3">{{ product.description }}</p>
+        </div>
+        <p>Something about shipping</p>
+      </div>
+      <div class="col-12 offset-1 col-lg-8">
+        <div class="carousel-wrapper">
+          <div id="sync1" class="owl-carousel">
+{#            {{ dump(product) }}#}
+            {% for img in product.images %}
+              <img src="{{ asset("uploads/images/products/" ~ img.image) }}" alt="{{ img.image }}">
+            {% endfor %}
+          </div>
+          <div id="sync2" class="owl-carousel">
+            {% for img in product.images %}
+              <img src="{{ asset("uploads/images/products/" ~ img.image) }}" alt="{{ img.image }}">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block javascripts %}
+  <script src="{{ asset("js/cart.js") }}"></script>
+  <script defer>
+    const buttonPlus = document.querySelector( '.plus' )
+    const quantityElem = document.querySelector( '.quantity span' )
+    let sum = +document.querySelector( '.amount' ).value === 1 ? 0 : +document.querySelector( '.amount' ).value
+
+    const checkoutBtn = $( '.checkout' )
+
+    buttonPlus.addEventListener( 'click', function () {
+      const size = document.querySelector( 'select' ).value
+      const quantitySpan = document.querySelector( '.quantity span' )
+      sum += +document.querySelector( '.amount' ).value
+      const url = '{{ path("add_to_cart",{product: product.id, quantity: "quantity", size: "size"}) }}'
+        .replace( 'quantity', sum )
+        .replace( 'size', size )
+      console.log( url )
+      let items = +localStorage.getItem( 'amountInCart' ) || 0
+      items += +document.querySelector( '.amount' ).value
+      quantitySpan.innerText = sum
+      localStorage.setItem( 'amountInCart', items )
+      const pdps = ( localStorage.getItem( 'orderedPdps' ) ? JSON.parse( localStorage.getItem( 'orderedPdps' ) ) : null ) || []
+      console.log( pdps )
+      !pdps.includes( +location.pathname.split( '/' ).pop() ) && pdps.push( +location.pathname.split( '/' ).pop() )
+      localStorage.setItem( 'orderedPdps', JSON.stringify( pdps ) )
+      switchView()
+      addToCart( url, false )
+    } )
+
+    const pdps = ( localStorage.getItem( 'orderedPdps' ) ? JSON.parse( localStorage.getItem( 'orderedPdps' ) ) : null ) || []
+
+    console.log( pdps )
+
+    if ( pdps.includes( +location.pathname.split( '/' ).pop() ) ) {
+      switchView()
+    }
+
+    let sync1 = $( '#sync1' )
+    let sync2 = $( '#sync2' )
+
+    sync1.owlCarousel( {
+      singleItem           : true,
+      slideSpeed           : 300,
+      navigation           : false,
+      pagination           : false,
+      afterAction          : syncPosition,
+      responsiveRefreshRate: 200,
+      loop                 : true,
+      center               : true
+    } )
+
+    sync2.owlCarousel( {
+      center               : true,
+      items                : 5,
+      itemsDesktop         : [ 1199, 10 ],
+      itemsDesktopSmall    : [ 979, 10 ],
+      itemsTablet          : [ 768, 8 ],
+      itemsMobile          : [ 479, 4 ],
+      pagination           : false,
+      loop                 : true,
+      responsiveRefreshRate: 100,
+      afterInit            : function ( el ) {
+        el.find( '.owl-item' ).eq( 0 ).addClass( 'synced' )
+      }
+    } )
+
+    function syncPosition ( el ) {
+      let current = this.currentItem
+      $( '#sync2' )
+        .find( '.owl-item' )
+        .removeClass( 'synced' )
+        .eq( current )
+        .addClass( 'synced' )
+      if ( $( '#sync2' ).data( 'owlCarousel' ) !== undefined ) {
+        center( current )
+      }
+    }
+
+    $( '#sync2' ).on( 'click', '.owl-item', function ( e ) {
+      e.preventDefault()
+      let number = $( this ).data( 'owlItem' )
+      sync1.trigger( 'owl.goTo', number )
+    } )
+
+    function center ( number ) {
+      let sync2visible = sync2.data( 'owlCarousel' ).owl.visibleItems
+      let num = number
+      let found = false
+      for ( let i in sync2visible ) {
+        if ( num === sync2visible[ i ] ) {
+          let found = true
+        }
+      }
+
+      if ( found === false ) {
+        if ( num > sync2visible[ sync2visible.length - 1 ] ) {
+          sync2.trigger( 'owl.goTo', num - sync2visible.length + 2 )
+        } else {
+          if ( num - 1 === -1 ) {
+            num = 0
+          }
+          sync2.trigger( 'owl.goTo', num )
+        }
+      } else if ( num === sync2visible[ sync2visible.length - 1 ] ) {
+        sync2.trigger( 'owl.goTo', sync2visible[ 1 ] )
+      } else if ( num === sync2visible[ 0 ] ) {
+        sync2.trigger( 'owl.goTo', num - 1 )
+      }
+    }
+
+    function switchView () {
+      $( '.size-desc' ).remove()
+      $( 'select' ).remove()
+      $( '.btns' ).remove()
+      $( '.gray-color.quantity' ).remove()
+      $( '.shop-btn.mb-3.plus.gray' ).remove()
+      checkoutBtn.show()
+    }
+    </script>
+{% endblock %}

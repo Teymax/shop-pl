@@ -1,0 +1,9 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        product_image:
+            uri_prefix:         '%app.path.product_image%'
+            upload_destination: '%kernel.project_dir%/public%app.path.product_image%'
+            inject_on_load: true
+            namer: vich_uploader.namer_origname

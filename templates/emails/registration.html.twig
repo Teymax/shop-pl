@@ -1,0 +1,11 @@
+<h3>Invite list</h3>
+
+Hi ! You're invited to our service.
+
+{# example, assuming you have a route named "login" #}
+To registered, go to: <a href="{{ url('reg',{'token': token}) }}">here</a>.
+
+Thanks!
+
+{# Makes an absolute URL to the /images/logo.png file #}
+<img src="{{ absolute_url(asset('images/logo.png')) }}">

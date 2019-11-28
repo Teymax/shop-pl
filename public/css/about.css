@@ -1,0 +1,95 @@
+.about-colours .row .col-12 {
+	padding: 1rem;
+}
+
+.about-colours .row .col-12 .about-block {
+	padding:         60px 50px;
+	text-align:      center;
+	height:          100%;
+	display:         flex;
+	flex-direction:  column;
+	justify-content: center;
+
+}
+
+.about-colours .row .col-12 .about-block.dark {
+	background: rgba(72, 68, 68, 1);
+}
+
+.about-colours .row .col-12 .about-block.light {
+	background: #55AFCF;
+}
+
+.about-colours .row .col-12 .about-block .title {
+	font-size:   24px;
+	font-family: Questrial, sans-serif;
+	color:       #FFF;
+}
+
+.about-colours .row .col-12 .about-block .description {
+	font-size:   16px;
+	font-family: Questrial, sans-serif;
+	color:       #FFF;
+}
+
+.about-colours .row .col-12 .about-block ul {
+	list-style: none;
+}
+
+.about-colours .row .col-12 .about-block ul li {
+	color:       #FFF;
+	font-family: Questrial, sans-serif;
+}
+
+.about-colours .row .col-12 .about-block ul li:before {
+	content:      '✓';
+	margin-right: .5rem;
+}
+
+section.video {
+	background: #55AFCF;
+	padding:    40px;
+}
+
+section.video iframe {
+	width:  100%;
+	height: 40em;
+}
+
+.shop-btn.not-light {
+	background: rgb(210, 210, 210);
+}
+
+.shop-btn.not-light:hover {
+	background: #55AFCF;
+}
+
+.contact-us h3 {
+	color: rgb(51, 51, 51);
+}
+
+.contact-us p {
+	color: #939393;
+}
+
+a.special-link {
+	text-decoration: none;
+	color:           #939393;
+}
+
+.contact-us form {
+	width: 100%;
+}
+
+.contact-us form input:not([type="submit"]):not([type="checkbox"]),
+.contact-us form textarea {
+	appearance:         none;
+	-moz-appearance:    none;
+	-webkit-appearance: none;
+	border:             none;
+	resize:             vertical;
+	width:              100%;
+	padding:            .5rem 1rem;
+	background:         rgba(102, 102, 102, .15);
+	outline:            none;
+}

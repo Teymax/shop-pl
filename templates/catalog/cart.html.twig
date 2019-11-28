@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cart{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset("css/catalog.css") }}">
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1 class="mt-4 mb-4">Your Cart:</h1>
+    <div class="row no-gutters mb-5">
+      <div class="col-12 col-lg-4">
+        <div class="row product-container">
+          {{ include('catalog/cartItems.html.twig') }}
+        </div>
+      </div>
+    </div>
+    <div class="order"></div>
+    <buttron class="shop-btn" style="cursor: pointer;" id="order" data-toggle="modal" data-target="#orderModal">ORDER</buttron>
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block javascripts %}
+  <script src="{{ asset("js/cart.js") }}"></script>
+  <script>
+        let removeButtons = document.getElementsByClassName( 'remove-product' );
+        [ ...removeButtons ].forEach( button => {
+          button.addEventListener( 'click', function ( event ) {
+            let product = event.target.id.replace( 'remove_', '' )
+            removeFromCart( "{{ path("remove_from_cart") }}", product )
+          } )
+        } )
+        document.getElementById( 'order' ).addEventListener( 'click', function ( event ) {
+          headers = { 'Content-Type': 'application/json' }
+          let productElements = document.getElementsByClassName( 'product' )
+          let products = []
+          for ( let i in productElements ) {
+            if ( productElements[ i ] === productElements.length ) break
+            let id = productElements[ i ].querySelector( 'span' ).id.replace( 'product_', '' )
+            let size = productElements[ i ].querySelector( '.size' ).id.replace( 'size_', '' )
+            let quantity = productElements[ i ].querySelector( '.quantity span' ).textContent
+            products.push( { id: id, quantity: quantity, size: size } )
+          }
+          ajax( 'POST', headers, '{{ path("order_form") }}', {
+            products, isFromCart: true
+          }, function ( data ) {
+            document.querySelector( '.modal-dialog' ).innerHTML = data
+          } )
+        } )
+    </script>
+{% endblock %}

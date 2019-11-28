@@ -1,0 +1,12 @@
+<h2>New order!</h2>
+<p>Name:{{ order.name }}</p>
+<p>Email:{{ order.email }}</p>
+<div class="product-list">
+    {% for productOrder in order.productOrders %}
+    <div class="product">
+        <h3>Name:{{ productOrder.product.name }}</h3>
+        <h3>Quantity:{{ productOrder.quantity }}</h3>
+    </div>
+    {% endfor %}
+    <p>Total price:{{ order.totalPrice }}</p>
+</div>

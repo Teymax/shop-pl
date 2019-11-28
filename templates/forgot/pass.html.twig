@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+{% endblock %}
+{% block body %}
+
+    <div class="row h-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="card forgot_form mb-3">
+            <div class="card-header"><h2>Reset Password</h2></div>
+            <div class="card-body">
+                <h5 class="text-center">Enter new password</h5>
+                {{ form_start(form) }}
+                <div class="col ml-1">Password</div>
+                <div class="col mb-3 text-center">
+                    {{ form_widget(form.password.first, {'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="col ml-1">Repeat Password</div>
+                <div class="col mb-3 text-center">
+                    {{ form_widget(form.password.second, {'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="col ml-1">
+                    {{ form_widget(form.save, {'attr':{'class':'mt-2 btn btn-primary'}}) }}
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset("css/main.css") }}">
+{% endblock %}
+{% block body %}
+
+  {#    <h1>{{ home_content }}! ✅</h1>#}
+  <div class="container">
+    <div class="carousel slide carousel-fade mt-4" data-ride="carousel" data-interval="3000">
+			<div class="bg-wrapper"></div>
+			<div class="info-wrapper">
+				<h3 class="blue-color">Prosty. Mądry. Bezpieczny.</h3>
+				<p class="text-white mb-5">Redi Shade to stylowe, szybko mocowane, rolety materiałowe i  papierowe bezinwazyjne plisowane, łatwe w montażu, odpowiednie dla prawie każdego okna.</p>
+				<a href="/catalog" class="shop-btn">Kupjc teraz</a>
+			</div>
+		  <div class="carousel-inner">
+			  <div class="carousel-item active">
+			    <img src="img/carousel/banner1.jpg" alt="Banner 1">
+			  </div>
+			  <div class="carousel-item">
+			    <img src="img/carousel/banner2.jpg" alt="Banner 2">
+			  </div>
+			  <div class="carousel-item">
+			    <img src="img/carousel/banner3.jpg" alt="Banner 3">
+	  		</div>
+		  </div>
+		</div>
+		<section class="activity">
+			<div class="row no-gutters">
+				<div class="col-12 col-lg-4 activity-item">
+					<a href="#" class="link">Nowe mieszkanie</a>
+				</div>
+				<div class="col-12 col-lg-4 activity-item">
+					<a href="#" class="link">żłobek</a>
+				</div>
+				<div class="col-12 col-lg-4 activity-item">
+					<a href="#" class="link">ozdabianie</a>
+				</div>
+				<div class="col-12 col-lg-4 activity-item">
+					<a href="#" class="link">swój własny projekt</a>
+				</div>
+				<div class="col-12 col-lg-4 activity-item">
+					<a href="#" class="link">Kupjc teraz</a>
+				</div>
+				<div class="col-12 col-lg-4 activity-item">
+					<a href="#" class="link">wynajem</a>
+				</div>
+			</div>
+		</section>
+		<section class="why-us mt-5 mb-5">
+			<div class="row no-gutters">
+				<div class="col-12 col-lg-9 d-flex flex-column justify-content-center">
+					<h2>Dlaczego warto korzystać z <span class="blue-color">Redi Shade?</span></h2>
+					<p class="mt-4 mb-4 gray-color font-weight-light">Rolety bezinwazyjne Redi Shade to idealne rozwiązanie tymczasowe. Niezależnie od tego, czy czekasz na wykonane na zamówienie żaluzje, zasłony czy rolety, chcąc zapewnić natychmiastową prywatność i bezpieczeństwo w swoim domu, mieszkaniu lub biurze. Lub poddajesz swojemu domowi metamorfozę przed sprzedażą, Rolety Cieni Redi zapewniają ci ochronę. Po prostu odmierz, przytnij, odklej i przyklej.</p>
+					<a href="/catalog" class="shop-btn width-fit-content">Kupjc teraz</a>
+				</div>
+				<div class="col-12 col-lg-3 d-none d-lg-block">
+					<img src="img/acc-logo.jpg" alt="Acc Logo">
+				</div>
+			</div>
+		</section>
+		<section class="types">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-6 col-lg-3 type-item">
+					<img src="img/types/img1.jpg" alt="Type">
+					<p class="title">Odmierz</p>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3 type-item">
+					<img src="img/types/img2.jpg" alt="Type">
+					<p class="title">przytni</p>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3 type-item">
+					<img src="img/types/img3.jpg" alt="Type">
+					<p class="title">odklej</p>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3 type-item">
+					<img src="img/types/img4.jpg" alt="Type">
+					<p class="title">przyklej</p>
+				</div>
+			</div>
+		</section>
+		<section class="our-colours">
+			<h3>Nasze <span class="blue-color">kolory</span></h3>
+			<p class="mt-4 mb-4">Rolety bezinwazyjne Redi Shade są dostępne w kolorze białym z filtrem światła, naturalnym, z filtrem światła, szarym zaciemnieniem pokoju, czarnym zaciemnieniem i białym materiałem. Zadzwoń do Redi Shade już teraz, aby dowiedzieć się więcej o naszych ciemnych lub zamów online już teraz.</p>
+			<a href="/colours" class="blue-color">Dowiedz się więcej ></a>
+		</section>
+  </div>
+{% endblock %}

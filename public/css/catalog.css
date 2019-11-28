@@ -1,0 +1,134 @@
+.product-list {
+	display: flex;
+}
+
+.product {
+	box-shadow:     rgba(0, 0, 0, 0.25) 0 3px 11px 0;
+	display:        flex;
+	flex-direction: column;
+}
+
+.product h3,
+.product p {
+	font-family: Questrial, sans-serif;
+	font-size:   16px;
+	font-weight: 300;
+	color:       rgb(51, 51, 51)
+}
+
+.product .price {
+	color:       rgb(85, 175, 207);
+	font-size:   24px;
+	font-weight: 300;
+}
+
+input.search {
+	appearance:         none;
+	-moz-appearance:    none;
+	-webkit-appearance: none;
+	border:             0;
+	border-bottom:      2px solid;
+	outline:            none;
+}
+
+.product .shop-btn {
+	border-radius: .5rem;
+	cursor:        pointer;
+}
+
+.pdp img {
+	width: 25em;
+}
+
+.pdp h1 {
+	font-size:   38px;
+	font-weight: 400;
+	font-family: Questrial, sans-serif;
+}
+
+.pdp .price {
+	font-size:   24px;
+	font-family: Questrial, sans-serif;
+}
+
+html body main .carousel-wrapper {
+	/*background: red;*/
+	overflow: hidden;
+	height:   100%;
+}
+
+#sync1 img {
+	width:  auto;
+	height: 25rem;
+}
+
+#sync1 .owl-item {
+	display:         flex;
+	justify-content: center;
+}
+
+#sync2 .owl-item {
+	width:      initial !important;
+	margin-top: 1rem;
+}
+
+#sync2 .owl-wrapper {
+	display:         flex !important;
+	width:           100% !important;
+	justify-content: center;
+	top:             1rem;
+}
+
+#sync2 .owl-item:not(:last-child) {
+	margin-right: 1rem;
+}
+
+#sync2 img {
+	width:  5em;
+	cursor: pointer;
+}
+
+html body main .container .row.pdp .shop-btn {
+	text-align: center;
+	color:      #F7F7F7;
+
+}
+
+.pdp .shop-btn.gray {
+	background: rgb(147, 147, 147);
+}
+
+.remove-product:active {
+	outline: none;
+}
+
+.products-list p.price {
+	margin-bottom: 0;
+}
+
+.remove-product {
+	appearance:         none;
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	border:             none;
+	outline:            none;
+	font-size:          2em;
+	position:           absolute;
+	top:                -.3em;
+	right:              0;
+	background:         transparent;
+	cursor:             pointer;
+}
+
+.product-item {
+	border-bottom: 1px solid rgba(5, 5, 5, .4);
+	margin-bottom: 1rem;
+}
+
+button.shop-btn {
+	cursor: pointer;
+}
+
+.modal .modal-header {
+	/*background: ;*/
+}

@@ -1,0 +1,100 @@
+footer {
+	margin-top: 2em;
+	width:      100%;
+}
+
+footer .ribbon {
+	text-align:     center;
+	padding-top:    1em;
+	padding-bottom: 1em;
+	color:          #FFF;
+}
+
+footer .ribbon p {
+	margin-bottom: 0;
+}
+
+footer .ribbon.first p {
+	font-family:  "Open Sans", sans-serif;
+	font-weight:  800;
+	font-size:    30px;
+	word-spacing: 1.5em;
+}
+
+footer .ribbon.second p {
+	font-size:   30px;
+	font-family: Questrial, sans-serif;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: none;
+	color:           inherit;
+}
+
+footer form input[type="email"] {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	border:             none;
+	outline:            none;
+	display:            block;
+	background:         #E0E0E0;
+	padding:            10px;
+	width:              100%;
+	font-size:          12px;
+	font-style:         italic;
+	font-family:        Questrial, sans-serif;
+}
+
+footer form input[type="submit"] {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	border:             none;
+	font-family:        Questrial, sans-serif;
+	background:         #5FBDDF;
+	text-transform:     uppercase;
+	font-weight:        200;
+	color:              #FFF;
+	padding:            10px 40px;
+	margin-top:         1rem;
+}
+
+footer .ribbon.third.light-blue-bg a {
+	color: #FFF;
+}
+
+@media screen and (max-width: 425px) {
+	html body footer img {
+		width:  50%;
+		margin: 0 auto;
+	}
+
+	html body footer a,
+	html body footer p {
+		text-align: center;
+	}
+
+	.menushka {
+		display: none;
+	}
+
+	html body footer .links {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	form {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	footer form input[type="submit"] {
+		margin: 1rem auto;
+		display: block;
+	}
+}

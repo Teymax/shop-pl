@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+{% endblock %}
+{% block title %}Register{% endblock %}
+{% block header %}
+{% endblock %}
+{% block body %}
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+        <div class="card forgot_form mb-3">
+            <div class="card-header"><h2>Registration</h2></div>
+            <div class="card-body">
+                <p>Fill all fields to complete the registration</p>
+                {{ form_start(registration_form) }}
+                <div class="col">
+                    Email
+                </div>
+                <div class="col text-center mb-3">
+                    {{ form_widget(registration_form.email, {'attr':{ 'class':'col'}}) }}
+                </div>
+                <div class="col">
+                    Password
+                </div>
+                <div class="col text-center mb-3">
+                    {{ form_widget(registration_form.password.first, {'attr':{ 'class':'col'}}) }}
+                </div>
+                <div class="col">
+                    Repeat Password
+                </div>
+                <div class="col text-center mb-3">
+                    {{ form_widget(registration_form.password.second, {'attr':{ 'class':'col'}}) }}
+                </div>
+                <div class="col ml-1">
+                    {{ form_widget(registration_form.save, {'attr':{'class':'mt-2 btn btn-primary'}}) }}
+                </div>
+                {{ form_end(registration_form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

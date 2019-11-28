@@ -1,0 +1,20 @@
+<div class="modal-content">
+    <form action="{{ path("order") }}" method="post" onsubmit="localStorage.removeItem('orderedPdps')">
+        <div class="modal-header blue-bg">
+            <h5 class="modal-title text-white" id="exampleModalLabel">ORDER</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" style="background: rgba(111, 111, 111, .1)">
+            <div class="d-flex flex-column p-4">
+                <input class="form-control mb-3" name="name" type="text" placeholder="Name...">
+                <input class="form-control" name="email" type="email" placeholder="Email...">
+                <input type="hidden" name="fromCart" value="{{ isFromCart }}">
+                <input type="hidden" name="products" value="{{ products }}">
+            </div>
+        </div>
+        <div class="modal-footer" style="background: rgba(111, 111, 111, .1); border-top-color: rgba(111, 111, 111, .3)">
+            <button type="button" class="btn btn-secondary gray-bg" data-dismiss="modal" style="border-radius: 0; border: 0;">Close</button>
+            <button type="submit" class="btn btn-primary blue-bg" style="border-radius: 0; border: 0;">Order</button>
+        </div>
+    </form>
+</div>

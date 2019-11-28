@@ -1,0 +1,9 @@
+{# templates/emails/registration.html.twig #}
+<h3>Hi! Do you forgot password?</h3>
+
+{# example, assuming you have a route named "login" #}
+
+To reset password, go to: <a href="{{ url('forgpass',{'token': token}) }}">...</a>.
+
+
+<p>Thanks!</p>

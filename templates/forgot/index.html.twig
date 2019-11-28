@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+{% endblock %}
+{% block body %}
+    <div class="row h-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="card forgot_form mb-3" style="max-width: 20rem;">
+            <div class="card-header"><h2>Reset Password</h2></div>
+            <div class="card-body">
+                <p>Enter your email to reset the password</p>
+                    {{ form_start(form) }}
+                    {{ form_widget(form.email, {'attr':{'placeholder':'example@example.com', 'class':'form-control'}}) }}
+                    {{ form_widget(form.submit, {'attr':{'class':'form-control mt-2 btn btn-primary'}}) }}
+                    {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

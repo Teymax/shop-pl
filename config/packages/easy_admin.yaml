@@ -1,0 +1,78 @@
+easy_admin:
+  entities:
+    Product:
+      class: App\Entity\Product
+      form:
+        fields:
+          - 'name'
+          - 'description'
+          - 'color'
+          - 'inStock'
+          - 'price'
+          - 'sizes'
+          - { property: 'images', type: 'collection', type_options: { entry_type: 'App\Form\ImageType', by_reference: false }}
+
+    Size:
+      permissions:
+        list:  ['ROLE_USER']
+        edit:  ['ROLE_USER']
+        new:  ['ROLE_USER']
+        show:  ['ROLE_USER']
+      class: App\Entity\Size
+      edit:
+        title: 'Edit size'
+        fields:
+          - { property: 'height', type_options: { required: true } }
+          - { property: 'width', type_options: { required: true } }
+          - { property: 'description'}
+          - { property: 'addPrice' }
+          - { property: 'products', type_options: { by_reference: false } }
+
+    Post:
+      permissions:
+        list:  ['ROLE_USER']
+        edit:  ['ROLE_USER']
+        new:  ['ROLE_USER']
+        show:  ['ROLE_USER']
+      class: App\Entity\Post
+      templates:
+        edit: 'admin/custom/edit_post.html.twig'
+        new: 'admin/custom/edit_post.html.twig'
+      form:
+        fields:
+          - name
+          - {property: 'content'}
+          - { property: 'author', type: 'App\Form\AuthorType' }
+    Book:
+      class: App\Entity\Book
+      templates:
+        edit: 'admin/custom/edit_order.html.twig'
+      edit:
+        fields:
+          - { property: 'id'}
+          - { property: 'productOrders', type: 'collection', type_options: { entry_type: 'App\Form\ProductOrdersType', by_reference: false }}
+    User:
+      permissions:
+        list:  ['ROLE_USER']
+        edit:  ['ROLE_USER']
+        new:  ['ROLE_USER']
+        show:  ['ROLE_USER']
+      class: App\Entity\User
+      controller: App\Controller\UserController
+      label: 'Users'
+      list:
+        help: 'Users list'
+        title: '%%entity_label%%'
+        fields: ['id', 'Email', 'role']
+      show:
+        title: 'User (#%%entity_id%%)'
+      new:
+        title: 'Add user'
+        fields:
+          - { property: 'Email', type: 'email', label: 'Email', type_options: { required: true } }
+          - { property: 'role', type_options: { required: true } }
+      edit:
+        title: 'Edit user'
+        fields:
+          - { property: 'role', type_options: { required: true } }
+

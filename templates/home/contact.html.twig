@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset("css/about.css") }}">
+{% endblock %}
+
+{% block body %}
+
+  <div class="container">
+  	<div class="carousel slide carousel-fade mt-4" data-ride="carousel" data-interval="3000">
+			<div class="bg-wrapper"></div>
+			<div class="info-wrapper">
+				<h3 class="text-white mb-5">SKONTAKTUJ SIĘ Z NAMI</h3>
+				<a href="/catalog" class="shop-btn">Kupjc teraz</a>
+			</div>
+		  <div class="carousel-inner">
+			  <div class="carousel-item active">
+			    <img src="img/carousel/banner4.jpg" alt="Banner 4">
+			  </div>
+			  <div class="carousel-item">
+			    <img src="img/carousel/banner6.jpg" alt="Banner 6">
+			  </div>
+			  <div class="carousel-item">
+			    <img src="img/carousel/banner7.jpg" alt="Banner 7">
+	  		</div>
+		  </div>
+		</div>
+		<section class="contact-us p-0 p-lg-5">
+			<div class="row no-gutters">
+				<div class="col-12 col-lg-6">
+					<h3 class="mb-4">Skontaktuj się <span class="blue-color">z nami</span></h3>
+					<p>Redi Shade oferuje ceny transakcyjne uczciwym klientom handlowym.<br>Pozwala to zaoferować klientom natychmiastowe rozwiązania do zasłaniania okien, gdy oczekują na zainstalowanie nowych żaluzji.<br>Proszę wypełnić formularz i przesłać, aby otrzymać nasz najnowszy cennik transakcji.</p>
+					<p><span class="blue-color">Telefon:</span> <a href="tel:111 111 111 111" class="special-link">111 111 111 111</a></p>
+					<p class="mb-5"><span class="blue-color">E-mail:</span> <a href="mailto:00000@redishade.pl" class="special-link">00000@redishade.pl</a></p>
+					<a href="/" class="shop-btn not-light">I AM A TRADE CUSTOMER</a>
+				</div>
+				<div class="col-12 col-lg-6">
+					<form action="/" class="mt-4 mt-lg-0">
+						<p>Imię i nazwisko:</p>
+						<p><input type="text" name="fullname"></p>
+						<p>Adres e-mail:</p>
+						<p><input type="email" name="email"></p>
+						<p>Telefon:</p>
+						<p><input type="email" name="phone"></p>
+						<p>Wiadomość:</p>
+						<p><textarea name="message"></textarea></p>
+						<p><label for="agreed"><input type="checkbox" name="agreed" id="agreed"> *Wyrażam zgodę na udostępnienie moich formularzy odpowiedzi.</label></p>
+						<input type="submit" value="Send message">
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="contact-us p-0 p-lg-5">
+			<div class="row">
+				<div class="col-12 col-lg-4">
+					<h3 class="mb-4">Klienci <span class="blue-color">handlowi</span></h3>
+					<p>Redi Shade Limited jest jedynym autoryzowanym dystrybutorem  Redi Shade w Polsce. Proszę wypełnić formularz i przesłać, aby dowiedzieć się więcej o naszych roletach bezinwazyjnych.</p>
+					<p><span class="blue-color">Telefon:</span> <a href="tel:+48 514363896" class="special-link">+48 514363896</a></p>
+					<p class="mb-5"><span class="blue-color">E-mail:</span> <a href="mailto:info@redishade.pl" class="special-link">info@redishade.pl</a></p>
+					<p class="mb-5"><span class="blue-color">Znajdujemy się w:</span><br>Redi Shade Poland Sp.z.o.o<br>Shop online www.redishade.pl<br>Polska, Warszawa</p>
+				</div>
+				<div class="col-lg-4 d-none d-lg-block">
+					<img src="img/20170406_122337.jpg" alt="20170406_122337.jpg">
+				</div>
+				<div class="col-12 col-lg-4">
+					<form action="/">
+						<p>Rejestracja handlu Redi Shade:</p>
+						<p><input type="text" name="num"></p>
+						<p>Imię i nazwisko:</p>
+						<p><input type="text" name="name"></p>
+						<p>Email:</p>
+						<p><input type="email" name="email"></p>
+						<p>Telefon:</p>
+						<p><input type="email" name="phone"></p>
+						<p><label for="agreed"><input type="checkbox" name="agreed" id="agreed"> *Wyrażam zgodę na udostępnienie moich formularzy odpowiedzi.</label></p>
+						<input type="submit" value="Send message">
+					</form>
+				</div>
+			</div>
+		</section>
+</div>
+{% endblock %}
